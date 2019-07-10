@@ -15,6 +15,18 @@ class Hello2 extends Component{
   }
 }
 
+class Text extends Component{
+  render(){
+    return <div>
+        <p>{this.props.text}</p>
+        <p>{this.props.number}</p>
+        <p>{this.props.boolean?"True":"False"}</p>
+        <p>{this.props.arrayOfNumbers.join(', ')}</p>
+        <p>{this.props.objectWithInfo.key}</p>
+      </div>
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -22,6 +34,13 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Hello title="Bienvenidos a este curso."/>
         <Hello2 title="Bienvenidos a este curso - Con clases."/>
+        <Text
+          arrayOfNumbers={[2,3,10]}
+          boolean={true} 
+          number={2} 
+          objectWithInfo={{key:'value', key2:'otherValue'}}
+          text="hola" 
+          />
         <a
           className="App-link"
           href="https://reactjs.org"
