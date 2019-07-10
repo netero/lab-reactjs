@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,12 +8,20 @@ function Hello(props){
 </p>
 }
 
+
+class Hello2 extends Component{
+  render(){
+    return <h3>{this.props.title}</h3>
+  }
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Hello title="Bienvenidos a este curso."/>
+        <Hello2 title="Bienvenidos a este curso - Con clases."/>
         <a
           className="App-link"
           href="https://reactjs.org"
