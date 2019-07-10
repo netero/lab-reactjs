@@ -38,6 +38,19 @@ TextDefaultProp.defaultProps={
   title:"Esto es un título por defecto."
 }
 
+class Contador extends Component{
+  constructor(){
+    super()
+    this.state={contador:1}
+    setInterval(()=>{
+      this.setState({contador:this.state.contador+1})
+    },1000)
+  }
+  render(){
+    return <span>{this.state.contador}</span>
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -64,6 +77,7 @@ function App() {
           Vamos a aprender React
         </a>
         <h3>Estoy usando react</h3>
+        <Contador/>
       </header>
     </div>
   );
