@@ -21,8 +21,9 @@ class Text extends Component{
         <p>{this.props.text}</p>
         <p>{this.props.number}</p>
         <p>{this.props.boolean?"True":"False"}</p>
-        <p>{this.props.arrayOfNumbers.join(', ')}</p>
+        <p>{this.props.arrayOfNumbers.map(this.props.multiply).join(', ')}</p>
         <p>{this.props.objectWithInfo.key}</p>
+        {this.props.title}
       </div>
   }
 }
@@ -40,6 +41,8 @@ function App() {
           number={2} 
           objectWithInfo={{key:'value', key2:'otherValue'}}
           text="hola" 
+          multiply={(n)=>n*3}
+          title={<h1>Esto es un elemento de react que se pasa como prop</h1>}
           />
         <a
           className="App-link"
