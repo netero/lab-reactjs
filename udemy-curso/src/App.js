@@ -39,9 +39,9 @@ TextDefaultProp.defaultProps={
 }
 
 class Contador extends Component{
-  constructor(){
-    super()
-    this.state={contador:1}
+  constructor(props){
+    super(props)
+    this.state={contador:props.contadorInicial}
     setInterval(()=>{
       this.setState({contador:this.state.contador+1})
     },1000)
@@ -83,7 +83,7 @@ function App() {
           Vamos a aprender React
         </a>
         <h3>Estoy usando react</h3>
-        <Contador/>
+        <Contador contadorInicial={55}/>
       </header>
     </div>
   );
