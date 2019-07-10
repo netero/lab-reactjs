@@ -28,6 +28,16 @@ class Text extends Component{
   }
 }
 
+class TextDefaultProp extends Component{
+  render(){
+    return <h1>{this.props.title}</h1>
+  }
+}
+
+TextDefaultProp.defaultProps={
+  title:"Esto es un título por defecto."
+}
+
 function App() {
   return (
     <div className="App">
@@ -44,6 +54,7 @@ function App() {
           multiply={(n)=>n*3}
           title={<h1>Esto es un elemento de react que se pasa como prop</h1>}
           />
+          <TextDefaultProp/>
         <a
           className="App-link"
           href="https://reactjs.org"
