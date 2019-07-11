@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ConditionalSection from './sections/conditional';
+import ListExample from './sections/list'
 
 function Hello(props){
   return <p>
@@ -86,6 +87,7 @@ function App() {
         <h3>Estoy usando react</h3>
         <Contador contadorInicial={55}/>
         <ConditionalSection/>
+        <ListExample/>
       </header>
     </div>
   );
