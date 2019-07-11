@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ConditionalSection from './sections/conditional';
 
 function Hello(props){
   return <p>
@@ -84,6 +85,7 @@ function App() {
         </a>
         <h3>Estoy usando react</h3>
         <Contador contadorInicial={55}/>
+        <ConditionalSection/>
       </header>
     </div>
   );
