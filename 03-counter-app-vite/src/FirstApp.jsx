@@ -1,15 +1,18 @@
-function GetValues(){
-    return 1+2;
-}
-const newMessage={
-    message:'Hola mundo',
-    title:'123'
-};
-export const FirstApp = () => {
+import PropTypes from 'prop-types';
+
+export const FirstApp = ( { title } ) => {
     return (
         <>
-            <h1>{ GetValues() }</h1>
+            <h1>{ title }</h1>
             <p>Subtitulo</p>
         </>
     )
+}
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired
+}
+
+FirstApp.defaultProps = {
+    title: 'No hay titulo'
 }
